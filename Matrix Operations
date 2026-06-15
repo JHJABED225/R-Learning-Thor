@@ -5,25 +5,24 @@
 #===========================================================================================================================
 
 mat<- matrix(c(1:8), byrow = TRUE, nrow= 2, ncol =4, 
-             dimnames = list(c("AB", "CD"), c("W","X", "Y", "Z"))    
+             dimnames = list(c("R1", "R2"), c("C1","C2", "C3", "C4"))    
             )
 mat 
 
 # byrow = TRUE means, value will be inserted to matrix by filling rows by rows. 
 # Must include nrow or ncol or both. 
-# dimnames means dimension names. It will show AB, CD in left row level and X, Y Z, W to the top level. 
+# dimnames means dimension names. It will show R1, R2 in left row level and C1, C2, C3, C4 to the top level. 
 # dmnames must cover the number of rows and columns. 
 
-
 #===========================================================================================================================
-# TASK: Create the same matrix without dimnames and insert dimnames later from two different vectors. 
+# TASK: Create the same matrix without dimnames and Add dimensions after creation. 
 #===========================================================================================================================
 
 matr<- matrix(c(1:8), byrow = TRUE, nrow= 2, ncol =4)
 matr 
 
-rr<- c("AB","CD")
-cc<- c("W","X", "Y", "Z")
+rr<- c("R1","R2")
+cc<- c("C1","C2", "C3", "C4")
 
 rownames(matr) <- rr
 colnames(matr) <- cc
@@ -32,7 +31,7 @@ matr
 # If you use only rownames then row titles will be added only.
 
 #===========================================================================================================================
-#Task: Construct star_wars_matrix using vector and 
+# TASK: Construct star_wars_matrix using vector and 
 #===========================================================================================================================
 
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
@@ -58,6 +57,8 @@ rowSums(star_wars_matrix)
 #===========================================================================================================================
 
 colSums(star_wars_matrix)
+
+
 
 
 
