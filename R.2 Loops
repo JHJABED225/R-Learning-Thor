@@ -1,12 +1,15 @@
 
 
-
+#=========================================================
 # for loops: 
 # Syntax: for(var in seq) { expression}
+#=========================================================
 
+#===========================================================================================================================
 # Task: Create a variable cities and print them using for loop. 
-cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
+#===========================================================================================================================
 
+cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
 for(city in cities) {
   print(city) 
   }
@@ -18,8 +21,14 @@ for(city in cities) {
   print(city) 
 }
 
+#=========================================================
 #Break usage in for loops
-# Print cities as long as nchar(number of character) is 6.
+#=========================================================
+
+#===========================================================================================================================
+# Task: Print cities as long as nchar(number of character) is 6.
+#===========================================================================================================================
+
 cities <- list("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
 for(city in cities) {
   if(nchar(city)==6) {
@@ -27,10 +36,11 @@ for(city in cities) {
   }
   print(city) 
 }
-
 # This will only print "New York" and "Paris"
 
-# Print cities except number of character is 6. 
+#===========================================================================================================================
+# Task: Print cities except number of character is 6. 
+#===========================================================================================================================
 
 cities <- list("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
 for(city in cities) {
@@ -40,25 +50,30 @@ for(city in cities) {
   print(city) 
 }
 
-
+#=========================================================
 # introducing i in for loops (for vector, not list)
+#=========================================================
+
 cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
 for(i in 1:length(cities)) {
   print(cities[i]) 
 }
 
-#Write down the cities name as format: New York is in the position 1 in the cities vector.
+#===========================================================================================================================
+#Task: Write down the cities name as format: New York is in the position 1 in the cities vector.
+#===========================================================================================================================
 
 cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
 for(i in 1:length(cities)) {
-  print(paste(cities[i], "is in the position", i, "in the cities vector")) #paste function is mandatory here. 
+  print(paste(cities[i], "is in the position", i, "in the cities vector")) #paste function is mandatory here. Does not work for list.
 }
 
-
+#===========================================================================================================================
 # Task: Pre-defined variables
-rquote <- "r's internals are irrefutably intriguing"
+#===========================================================================================================================
+
+rquote <- "r's internals are irrefutably intriguing"     #This can be set as function(text) and then inside strsplit, use text in the first portion. 
 chars <- strsplit(rquote, split = "")[[1]]
-chars 
 
 rcount <- 0   # Initialize rcount
 
