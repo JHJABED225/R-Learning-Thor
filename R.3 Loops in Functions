@@ -1,5 +1,7 @@
-#Task: Write a function that will count the vowels inside a text. 
 
+#===========================================================================================================================
+#Task: Write a function that will count the vowels inside a text. 
+#===========================================================================================================================
 count_vowels<- function(text) {               #function is named as count_vowels
   chars<- strsplit(tolower(text), "")[[1]]    # text is converted to lowercase and then splitted into single letters. Carefull about not giving space inside inverted commas.
   count<-0
@@ -11,3 +13,46 @@ count_vowels<- function(text) {               #function is named as count_vowels
   count
 }
 count_vowels("Hello Bangladesh")
+
+
+#===========================================================================================================================
+Task: Count the total views for popular options
+#===========================================================================================================================
+
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+
+interpret <- function(num_views) {
+  if (num_views > 15) {
+    print("You're popular!")
+    return(num_views)
+  } else {
+    print("Try to be more visible!")
+    return(0)
+  }
+}              #This interpret function works for defining popularity. 
+
+# Main task start now:
+
+interpret_all <- function(views, return_sum=TRUE) {
+  count <- 0
+
+  for (v in views) {
+    count<- count+interpret(v)
+  }
+
+  if (return_sum==TRUE) {
+      return(count)
+  } else {
+      return(NULL)
+  }
+}
+
+# Call the interpret_all() function on both linkedin and facebook
+interpret_all(linkedin)
+interpret_all(facebook)
+
+
+
+
+
