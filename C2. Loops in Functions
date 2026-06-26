@@ -1,0 +1,13 @@
+#Task: Write a function that will count the vowels inside a text. 
+
+count_vowels<- function(text) {               #function is named as count_vowels
+  chars<- strsplit(tolower(text), "")[[1]]    # text is converted to lowercase and then splitted into single letters. Carefull about not giving space inside inverted commas.
+  count<-0
+  for(ch in chars) {
+    if(ch %in% c("a", "e", "i", "o", "u")) {
+      count<- count+1
+    }
+  }
+  count
+}
+count_vowels("Hello Bangladesh")
