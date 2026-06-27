@@ -100,9 +100,15 @@ select_el <- function(x, index) {          # Generic select function
 names<- lapply(split_low, select_el, 1)
 years<- lapply(split_low, select_el,2)
 
-
-
-
-
+#===========================================================================================================================
+# Task: If the nchar in names >5 then throw NULL otherwise provide years.
+#===========================================================================================================================
+lapply(split_low, function(x) {
+  if (nchar(x[1]) > 5) {
+    return(NULL)
+  } else {
+    return(x[2])
+  }
+})
 
 
