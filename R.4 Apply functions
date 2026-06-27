@@ -1,5 +1,8 @@
-#lapply returns lists. 
-#
+#lapply returns lists irrespective of what provided.  
+# unlist(lapply(cities, nchar)) will provide a vector by converting the list to a vector. 
+
+
+
 
 #===========================================================================================================================
 # Task: Create a list "nyc" and find their class of each column inside the list. 
@@ -31,6 +34,21 @@ for(i in 1:length(cities)) {
 num_chars
 
 # Procedure-2: 
-lapply(cities, nchar) 
+lapply(cities, nchar)     #This will provide the result as a list irrespective of what provided. 
+
+unlist(lapply(cities, nchar))    #This will provide the results as a vector. 
+
+#===========================================================================================================================
+# Create vector oil_prices and function multiply, then use multiply function and apply function to find the 4times of oil_prices
+#===========================================================================================================================
+oil_prices<- c(2.37,2.49,2.18,2.22,2.47,2.32)
+multiply<- function(x, factor){
+  x*factor 
+}
+
+multiply(oil_prices, 4) 
+unlist(lapply(oil_prices, multiply, factor= 4))      #result will be provided as vector. 
+
+
 
 
