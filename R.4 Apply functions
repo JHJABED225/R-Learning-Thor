@@ -51,8 +51,44 @@ unlist(lapply(oil_prices, multiply, factor= 4))      #result will be provided as
 
 
 #===========================================================================================================================
+# Task: Create a vector pioneers, then split the name and birthyear using strsplit
+# Then convert the names into lowercase and find the structure of new split_low
+#===========================================================================================================================
+
+pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+
+split_math <- strsplit(pioneers, split = ":")       # Split names from birth year
+
+split_low<- lapply(split_math, tolower)         # Convert to lowercase strings: split_low
+
+str(split_low)                     # Take a look at the structure of split_low
+
 
 #===========================================================================================================================
+# Task: Create two function named: select_first, select_second to select the first and second elements.
+# Create names and years list and vector (unlist) using the functions
+#===========================================================================================================================
+
+pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")        # Code from previous exercise:
+split <- strsplit(pioneers, split = ":")
+split_low <- lapply(split, tolower)
+
+select_first <- function(x) {            # function select_first()
+  x[1]
+}
+names<-lapply(split_low, select_first)         # Apply select_first() over split_low: names
+
+select_second<- function(x) {                 # Write function select_second()
+  x[2]
+}
+years<- lapply(split_low, select_second)       # Apply select_second() over split_low: years
+
+
+#===========================================================================================================================
+
+#===========================================================================================================================
+
+
 
 
 
