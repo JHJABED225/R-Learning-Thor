@@ -1,0 +1,25 @@
+#lapply returns lists. 
+#
+
+#===========================================================================================================================
+# Task: Create a list "nyc" and find their class of each column inside the list. 
+#===========================================================================================================================
+nyc<- list(
+  pop= 8405837, 
+  boroughs = c("Manhattan","Bronx","Brooklyn", 
+               "Queens", "Staten Island"), 
+  capital= FALSE )
+#To find out the class of each column in the list the 2 procedure is mentioned below: 
+# Procedure-1: 
+for (info in nyc) {
+  print(class(info))
+}
+#Procedure-2: 
+lapply(nyc, class)
+
+#===========================================================================================================================
+# Task: Create a vector "cities" and find their legth of each cities
+#===========================================================================================================================
+
+cities<- c("New York", "Paris", "London", "Tokyo", 
+           "Rio de Janerio", "Cape Town")
