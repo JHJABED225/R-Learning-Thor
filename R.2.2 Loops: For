@@ -1,4 +1,8 @@
 
+# break command stops the loop when the if condition met.
+# next command skips the value that satisfies the if condition and returns other values. 
+# strsplit converts the text or word into several letters as a list. 
+
 
 #=========================================================
 # for loops: 
