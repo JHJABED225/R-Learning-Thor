@@ -23,3 +23,14 @@ lapply(nyc, class)
 
 cities<- c("New York", "Paris", "London", "Tokyo", 
            "Rio de Janerio", "Cape Town")
+# Procedure-1: 
+num_chars<- c()
+for(i in 1:length(cities)) {
+  num_chars[i]<- nchar(cities[i])
+}
+num_chars
+
+# Procedure-2: 
+lapply(cities, nchar) 
+
+
