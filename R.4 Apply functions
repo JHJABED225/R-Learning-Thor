@@ -85,9 +85,20 @@ years<- lapply(split_low, select_second)       # Apply select_second() over spli
 
 
 #===========================================================================================================================
-
+# The above task in different way:
 #===========================================================================================================================
 
+pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+split <- strsplit(pioneers, split = ":")
+split_low <- lapply(split, tolower)
+
+select_el <- function(x, index) {          # Generic select function
+  x[index]
+} 
+
+# Use lapply() twice on split_low: names and years 
+names<- lapply(split_low, select_el, 1)
+years<- lapply(split_low, select_el,2)
 
 
 
