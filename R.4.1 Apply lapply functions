@@ -1,3 +1,4 @@
+#lapply works on list or vecotr. Function can return R objects of different classes. 
 #lapply returns lists irrespective of what provided.  
 # unlist(lapply(cities, nchar)) will provide a vector by converting the list to a vector. 
 
