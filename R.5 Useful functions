@@ -1,4 +1,7 @@
 
+# identical function evaluates if two vector is identical or not. 
+  # Command: identical (vector 1, vector 2) 
+  # This will result TRUE or FALSE. 
 
 
 #===========================================================================================================================
