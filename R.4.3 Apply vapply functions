@@ -1,12 +1,12 @@
 # lapply
-  # apply function over list or vector 
-  # output = list
+    # apply function over list or vector 
+    # output = list
 # sapply
-  # apply function over list or vector
-  # try to simplify list to array
+    # apply function over list or vector
+    # try to simplify list to array
 # vapply 
-  # apply function over list or vector
-  # explicitly specify output format
+    # apply function over list or vector
+    # explicitly specify output format
 
 
 #===========================================================================================================================
