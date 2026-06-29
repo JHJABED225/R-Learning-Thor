@@ -4,6 +4,54 @@
   # This will result TRUE or FALSE. 
 
 
-#===========================================================================================================================
+# Regular expressions: 
+  # A sequence of characters or metacharacters that form a seach pattern which can be used to match strings. 
+  # Regexes are particularly handy when you are cleaning your data. 
+  # Pattern existence; Pattern extraction; Pattern Replacemnets. 
+
+# grep and grepl functions: 
+    #grepl(pattern= <regex> , x = <strings> )
 
 #===========================================================================================================================
+# Task: From cities vector, find out which city in cities contain "r"
+#===========================================================================================================================
+
+cities<- c("New York", "Paris", "London", "Tokyo", 
+           "Rio de Janerio", "Cape Town")
+
+grepl(pattern = "r", x = cities)            # This will result logical value(TRUE/FALSE)
+which(grepl(pattern= "r", x = cities))      # This will provide numerical position that contains r. 
+
+#===========================================================================================================================
+# Task: From cities vector, find out which city in cities contain "r" or "a"
+#===========================================================================================================================
+
+cities<- c("New York", "Paris", "London", "Tokyo", 
+           "Rio de Janerio", "Cape Town")
+
+grepl(pattern = "r|a", x = cities)            # This will result logical value(TRUE/FALSE)
+which(grepl(pattern= "r|a", x = cities))      # This will provide numerical position that contains r or a. 
+
+
+
+#===========================================================================================================================
+# Task: From cities vector, find out which city in cities starts with "r" 
+#===========================================================================================================================
+ 
+grepl(pattern= "^r", x= tolower(cities))            #tolower function is used, else R and r will be considered different. 
+which(grepl(pattern ="^r", x= tolower(cities)))  
+
+#===========================================================================================================================
+# Task: From cities vector, find out which city in cities ends with "o" 
+#===========================================================================================================================
+
+grepl(pattern= "o$", x= tolower(cities))    #tolower function is not mandatory for matching the last letter, unless all the letters are in capital form 
+which(grepl(pattern = "o$", x = tolower(cities)))
+
+
+
+
+
+
+
+
