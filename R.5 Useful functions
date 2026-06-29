@@ -14,6 +14,12 @@
   # grep (pattern= <regex> , x = <string> )
   # grep and grepl both works same but output has different pattern, grep provide numerical position and grepl provide logical(TRUE/FALSE) 
   # which(grepl( ) ) provides the same result as grep.
+
+# sub and gsub functions: 
+  # sub(pattern =<regex>, replacement = <string>, x = <string> ) 
+  # gsub(pattern = <regex>, replacement = <string>, x = <string> ) 
+  # sub and gsub replaces part of a string, where sub stop works when only one matches. 
+
 # Matching characters at the beginning or at the end: 
   # grepl(pattern = "^a", x = vector name)     This will find what start with "a"
   # grepl(pattern = "a$", x = vector name)     This will find what ends with "a"
