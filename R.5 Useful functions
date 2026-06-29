@@ -10,7 +10,14 @@
   # Pattern existence; Pattern extraction; Pattern Replacemnets. 
 
 # grep and grepl functions: 
-    #grepl(pattern= <regex> , x = <strings> )
+  # grepl(pattern= <regex> , x = <string> )
+  # grep (pattern= <regex> , x = <string> )
+  # grep and grepl both works same but output has different pattern, grep provide numerical position and grepl provide logical(TRUE/FALSE) 
+  # which(grepl( ) ) provides the same result as grep.
+# Matching characters at the beginning or at the end: 
+  # grepl(pattern = "^a", x = vector name)     This will find what start with "a"
+  # grepl(pattern = "a$", x = vector name)     This will find what ends with "a"
+
 
 #===========================================================================================================================
 # Task: From cities vector, find out which city in cities contain "r"
