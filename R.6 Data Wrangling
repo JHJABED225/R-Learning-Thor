@@ -1,6 +1,50 @@
 
+# filter: 
+    # filter creates a new subset according to condition inside it. 
+    # filter(year== 2007, country== "Bangladesh")         # Rows where both condition meet, the observations are provided. 
+    # filter(year== 2007 | country=="Bangladesh")         #If observations either from country Bangladesh or from year 2007, are showed. 
+
+# arrange: 
+    # arrange sorts the observations either ascending(default) or descending based on provided condition (column name) 
+    #
+
 
 
 #===========================================================================================================================
-# Task: 
+# Task: Filter observations where country is Bangladesh or Year is 2007.
+# Task: Filter observations where country is Bangladesh and Year is 2007.
 #===========================================================================================================================
+
+gp<- gapminder %>% 
+    filter(year==2007 | country== "Bangladesh")
+View(gp)
+
+gp<- gapminder %>% 
+    filter(year==2007, country=="Bangladesh")
+View(gp)
+
+
+#===========================================================================================================================
+# Task: Sort the gapminder dataset according to year. Ascending and Descending (2 times sorting)
+#===========================================================================================================================
+
+gp<- gapminder %>% 
+    arrange(year)     # By default ascending order. 
+View(gp)
+  
+gp<- gapminder %>%
+    arrange(desc(year))   # Mention desc before year to sort in descending order. 
+View(gp)
+
+
+
+
+#===========================================================================================================================
+
+#===========================================================================================================================
+
+
+
+
+
+
