@@ -8,7 +8,8 @@
     # arrange sorts the observations either ascending(default) or descending based on provided condition (column name) 
     #
 
-
+# mutate: 
+    # mutate changes the existent variable or can create new variable.  
 
 #===========================================================================================================================
 # Task: Filter observations where country is Bangladesh or Year is 2007.
@@ -36,6 +37,16 @@ gp<- gapminder %>%
     arrange(desc(year))   # Mention desc before year to sort in descending order. 
 View(gp)
 
+
+#===========================================================================================================================
+# Task: Filter for year 2007 then Divide pop by 100000 and sort by pop descending. 
+#===========================================================================================================================
+
+gp<- gapminder %>% 
+    filter(year== 2007) %>% 
+    mutate(pop= round(pop/100000,2)) %>%
+    arrange(desc(pop))
+View(gp)
 
 
 
