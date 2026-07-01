@@ -1,9 +1,29 @@
 
+# ggplot: gg means grammer of graphics. 
 
+
+
+
+
+
+  # facet: facet_wrap converts the plot into several small subplots. It is written at the end of all commands. 
+    # facet_wrap( ~ column name). This will create several subplot for specified column name. 
 
 
 
 
 #===========================================================================================================================
-
+# Task: Show a scatterplot using pop and lifeExp from gapminder_1952. color and size according to continent and gdpPercap.
 #===========================================================================================================================
+
+library(gapminder)
+library(dplyr)
+library(ggplot2)
+
+gapminder_1952 <- gapminder %>%
+  filter(year == 1952)
+
+ggplot(gapminder_1952,aes(x=pop, y=lifeExp, color=continent, size=gdpPercap)) +
+  geom_point() +
+  scale_x_log10() 
+
