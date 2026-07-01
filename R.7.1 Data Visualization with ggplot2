@@ -39,3 +39,18 @@ ggplot(gapminder, aes(x=gdpPercap, y= lifeExp, color= continent, size= pop )) +
       facet_wrap(~ year)  # Creates subplot according to year
 
 
+#===========================================================================================================================
+# Task: Calculate the mean life expectancy and show bar diagram.
+#===========================================================================================================================
+by_continent<- gapminder %>% 
+  group_by(continent) %>% 
+  summarize(meanlifeExp= mean(lifeExp))
+by_continent
+
+ggplot(by_continent, aes(x=continent, y= meanlifeExp)) + geom_col() 
+
+
+
+
+
+
