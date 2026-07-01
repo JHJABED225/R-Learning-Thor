@@ -4,7 +4,7 @@
  # To create scatterplot, add geom_point() after ggplot
  # To create line graph, add geom_line() after ggplot. 
  # To create bar diagram, add geom_col. 
- # 
+ # For Histogram, add geom_histogram. Histogram has only one aesthetinc(x=   ). You can add binwidth inside geom_histogram( ) parenthesis. 
 
 
 
@@ -63,6 +63,24 @@ oceania_1952 <- gapminder %>%
 
 ggplot(oceania_1952, aes(country, gdpPercap)) + geom_col() 
 
+#===========================================================================================================================
+# Task: # Create a histogram of population (pop_by_mil)
+#===========================================================================================================================
+
+gapminder_1952 <- gapminder %>%
+  filter(year == 1952) %>%
+  mutate(pop_by_mil = pop / 1000000)
+
+ggplot(gapminder_1952, aes(x=pop_by_mil)) +geom_histogram(bins= 50)
+
+
+#===========================================================================================================================
+# Create a histogram of population (pop), with x on a log scale
+#===========================================================================================================================
+gapminder_1952 <- gapminder %>%
+  filter(year == 1952)
+
+ggplot(gapminder_1952, aes(pop)) + geom_histogram()+ scale_x_log10()
 
 
 
