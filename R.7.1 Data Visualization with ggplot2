@@ -1,7 +1,10 @@
 
 # ggplot: gg means grammer of graphics. 
 
-
+ # To create scatterplot, add geom_point() after ggplot
+ # To create line graph, add geom_line() after ggplot. 
+ # To create bar diagram, add geom_col. 
+ # 
 
 
 
