@@ -27,3 +27,15 @@ ggplot(gapminder_1952,aes(x=pop, y=lifeExp, color=continent, size=gdpPercap)) +
   geom_point() +
   scale_x_log10() 
 
+
+#===========================================================================================================================
+# Task: Scatter plot comparing gdpPercap and lifeExp, with color representing continent
+# and size representing population, faceted by year
+#===========================================================================================================================
+
+ggplot(gapminder, aes(x=gdpPercap, y= lifeExp, color= continent, size= pop )) +
+      geom_point() +      # Mandatory to show the points. 
+      scale_x_log10() +   # Solve scaling problems. 
+      facet_wrap(~ year)  # Creates subplot according to year
+
+
