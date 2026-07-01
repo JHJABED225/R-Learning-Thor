@@ -3,7 +3,8 @@
 
  # To create scatterplot, add geom_point() after ggplot
  # To create line graph, add geom_line() after ggplot. 
- # To create bar diagram, add geom_col. 
+ # To create bar diagram, add geom_col(). 
+ # For boxplot, add geom_boxplot ().
  # For Histogram, add geom_histogram. Histogram has only one aesthetinc(x=   ). You can add binwidth inside geom_histogram( ) parenthesis. 
 
 
@@ -12,7 +13,7 @@
   # facet: facet_wrap converts the plot into several small subplots. It is written at the end of all commands. 
     # facet_wrap( ~ column name). This will create several subplot for specified column name. 
 
-
+  # expand_limits(y=0), this shows the origin in the graph. 
 
 
 #===========================================================================================================================
@@ -82,7 +83,27 @@ gapminder_1952 <- gapminder %>%
 
 ggplot(gapminder_1952, aes(pop)) + geom_histogram()+ scale_x_log10()
 
+#===========================================================================================================================
+# Task: Create a boxplot comparing gdpPercap among continents. Put the y-axis on a log scale with scale_y_log10().
+#===========================================================================================================================
+
+gapminder_1952 <- gapminder %>%
+  filter(year == 1952)
 
 
+ggplot(gapminder_1952, aes(x= continent, y= gdpPercap)) + geom_boxplot() + scale_y_log10()
+
+#===========================================================================================================================
+# Task: Add a title to this graph: "Comparing GDP per capita across continents"
+#===========================================================================================================================
+
+gapminder_1952 <- gapminder %>%
+  filter(year == 1952)
+
+
+ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(title = "Comparing GDP per capita across continents")
 
 
