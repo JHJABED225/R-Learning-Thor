@@ -1,11 +1,16 @@
 
+# select: 
+    # select is used to pick the specific column from a table/dataset.
+
+
 # filter: 
-    # filter creates a new subset according to condition inside it. 
+    # extracts observations based on conditions. 
+    # filter creates a new subset.
     # filter(year== 2007, country== "Bangladesh")         # Rows where both condition meet, the observations are provided. 
     # filter(year== 2007 | country=="Bangladesh")         #If observations either from country Bangladesh or from year 2007, are showed. 
 
 # arrange: 
-    # arrange sorts the observations either ascending(default) or descending based on provided condition (column name) 
+    # arrange sorts the observations either ascending(default) or descending based on one or more provided condition (column name) 
     #
 
 # mutate: 
