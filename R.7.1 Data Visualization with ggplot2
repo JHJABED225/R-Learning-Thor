@@ -28,9 +28,9 @@ gapminder_1952 <- gapminder %>%
   filter(year == 1952)
 
 ggplot(gapminder_1952,aes(x=pop, y=lifeExp, color=continent, size=gdpPercap)) +
-  geom_point() +
-  scale_x_log10() 
-
+  geom_point() +           # geom_point introduces scatterplot. 
+  scale_x_log10() +        # Reshape X scalling. 
+  expand_limits(y=0)       # Brings origin in the graph. 
 
 #===========================================================================================================================
 # Task: Scatter plot comparing gdpPercap and lifeExp, with color representing continent
