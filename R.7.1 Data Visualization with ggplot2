@@ -107,3 +107,39 @@ ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
   labs(title = "Comparing GDP per capita across continents")
 
 
+#===========================================================================================================================
+# Create scatter plot and add smooth red line. 
+#===========================================================================================================================
+
+ggplot(BOD, aes(Time, demand))+ 
+  geom_point(size= 3) + geom_smooth(color= "red") 
+
+
+#===========================================================================================================================
+# Task: Create scatter plot from CO2 (conc, uptake) dataset. Make the point bigger and opacity (alpha) lower. 
+#===========================================================================================================================
+
+names(CO2)        # names function shows the column inside a dataset. 
+
+CO2 %>% 
+  ggplot(aes(conc, uptake, color= Treatment))+  
+  geom_point(size= 3, alpha= 0.50) +                    # size = number, makes all points same size. 
+  labs(title= "Concentration of CO2")+ 
+  theme_gray()
+
+
+#===========================================================================================================================
+# Task: Create box plot (Treatment, uptake), adding points with opacity (alpha), size and color variation for each points. 
+#===========================================================================================================================
+
+CO2 %>% 
+  ggplot(aes(Treatment, uptake)) + geom_boxplot() + 
+  geom_point(aes( alpha= 0.5,                           # alpha, below 1, makes opacity of points lower. 
+                  size= conc, color = Plant))+          # color and size are variables now. 
+  labs(title= "Concentration of CO2") +                 # adds title to the top. 
+  facet_wrap(~ Type)                                    # Converts to several sub graph. 
+
+
+
+
+
