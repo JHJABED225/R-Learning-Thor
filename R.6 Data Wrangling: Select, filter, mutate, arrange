@@ -1,6 +1,11 @@
 
 # select: 
     # select is used to pick the specific column from a table/dataset.
+    # starts_with(" "), ends_with(" ") selects all those column that starts or ends with specific substring. 
+    # contains(" ") select all those column that  contains specific part. 
+    # last_cols(), returns the last column of a dataset. 
+    # matches(" ") returns column that match specific characters. 
+    # -column name, provide all columns except the given one. 
 
 
 # filter: 
