@@ -2,6 +2,7 @@
   # count: 
     # count() : this counts the total observations in the datasets. 
     # count(column name): This will count for each category in that column. 
-    # 
+    # count(column name, sort= TRUE): This will display the result Descendingly. 
+    # count(column name, wt= column name 2, sort= TRUE): This will aggregate the total weighting column 2. 
 
 #===========================================================================================================================
