@@ -1,0 +1,14 @@
+
+
+  # relocate 
+    # changes the column positions.
+    # Quick and efficient syntax. 
+    # syntax: 
+          # relocate(column to move, .before= The column before which you want to place the desired column) 
+          # relocate(column to move, .after= The column after which you want to place the desired column)
+
+
+#===========================================================================================================================
+# Task: 
+#===========================================================================================================================
+
