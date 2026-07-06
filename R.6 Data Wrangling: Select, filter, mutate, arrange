@@ -12,7 +12,8 @@
     # extracts observations based on conditions. 
     # filter creates a new subset.
     # filter(year== 2007, country== "Bangladesh")         # Rows where both condition meet, the observations are provided. 
-    # filter(year== 2007 | country=="Bangladesh")         #If observations either from country Bangladesh or from year 2007, are showed. 
+    # filter(year== 2007 | country=="Bangladesh")         # If observations either from country Bangladesh or from year 2007, are showed. 
+    # filter(country %in% c("Bangladesh", "US)            # To filter with multiple options in same column.
 
 # arrange: 
     # arrange sorts the observations either ascending(default) or descending based on one or more provided condition (column name) 
