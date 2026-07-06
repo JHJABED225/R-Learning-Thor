@@ -6,6 +6,10 @@
     # syntax: 
           # relocate(column to move, .before= The column before which you want to place the desired column) 
           # relocate(column to move, .after= The column after which you want to place the desired column)
+          # relocate(column to move, .after= last_col() )
+  # select column can also do the task by selecting column to specific order. 
+  # Difference is relocate selects all columns and select picks the specific columns. 
+
 
 
 #===========================================================================================================================
