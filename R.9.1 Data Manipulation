@@ -1,0 +1,18 @@
+
+
+  # rename one or more variable/column name: 
+    # rename(column new name = old name)           #Only one can be renamed wih per rename command.
+    # select( column to keep and new name= old name)       #One or more column can be renamed.
+
+
+
+#===========================================================================================================================
+# Task: Select name, height, mass and hair_color from starwars and then rename mass to weight. 
+#===========================================================================================================================
+
+starwars%>% 
+  select(name, height, mass, hair_color)%>% 
+  rename(weight= mass)
+
+starwars %>% 
+  select(name, height, weight= mass, hair_color )
