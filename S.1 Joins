@@ -1,6 +1,10 @@
+# Join is used to combine two or more datasets/data frames. Appropriate join type in required for specific workflow. 
+# There are 
 
-
-
+ # inner_join: joins only the matching data from both datasets. 
+ #   dataset_1 %>% 
+        inner_join(dataset_2, by= c("match column from 1" = "match column from 2") ) 
+ # Join can be done over multiple columns. In that case, use comma inside by (do not use equal). 
 
 
 
