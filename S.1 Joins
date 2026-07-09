@@ -94,11 +94,20 @@ view(filter_NA_lnem)
 
 
 
+# self Join (Need to learn more) 
 
+# Join themes to itself again to find the grandchild relationships
+themes %>% 
+  inner_join(themes, by = c("id" = "parent_id"), suffix = c("_parent", "_child")) %>%
+  inner_join(themes, by = c("id_child" = "parent_id"), suffix = c("_parent", "_grandchild"))
 
+# Another self join system, need to be understand.  
 
-
-
+themes %>% 
+  # Left join the themes table to its own children
+  left_join(themes, by= c("id"= "parent_id"), suffix= c("_parent", "_child")) %>%
+  # Filter for themes that have no child themes
+  filter(is.na(id_child)==TRUE)
 
 
 
