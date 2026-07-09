@@ -62,3 +62,45 @@ inem<- employees %>%
   select(id, salary_employee, bonus) 
 
 view(inem)
+
+#===========================================================================================================================
+# Task: Join bonuses and employees tibble with different joins and replace NA with different function. 
+#===========================================================================================================================
+
+lnem<- employees %>% 
+  left_join(bonuses, by= "id", suffix = c("_employee","_bonus")) %>%   
+  select(id, name, salary_employee, bonus) %>% 
+  replace_na(list(bonus=0))                              # This replace NA with 0, in the bonus column.
+
+view(lnem)
+
+rnem<- bonuses %>% 
+    right_join(employees, by= "id", suffix= c("_bonus", "_employee")) %>% 
+    select(-salary_bonus) %>% 
+    mutate(bonus= coalesce(bonus,0))                   # Inside coalesce, the first argument should be the column name here.
+  
+view(rnem)
+
+#===========================================================================================================================
+# Task: Join employees and bonuses using left join and filter only where bonus is NA. 
+#===========================================================================================================================
+
+filter_NA_lnem<- employees %>% 
+  left_join(bonuses, by= "id", suffix= c("_employee", "_bonus"))%>%
+  select(-salary_bonus) %>%
+  filter(is.na(bonus)==TRUE)
+
+view(filter_NA_lnem) 
+
+
+
+
+
+
+
+
+
+
+
+
+
