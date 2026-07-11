@@ -87,7 +87,9 @@ filter_NA_lnem<- employees %>%
 
 view(filter_NA_lnem) 
 
+#===========================================================================================================================
 
+#===========================================================================================================================
 
 # self Join (Need to learn more) 
 
@@ -96,13 +98,40 @@ themes %>%
   inner_join(themes, by = c("id" = "parent_id"), suffix = c("_parent", "_child")) %>%
   inner_join(themes, by = c("id_child" = "parent_id"), suffix = c("_parent", "_grandchild"))
 
+#===========================================================================================================================
+
+#===========================================================================================================================
+
 # Another self join system, need to be understand.  
 
 themes %>% 
-  # Left join the themes table to its own children
-  left_join(themes, by= c("id"= "parent_id"), suffix= c("_parent", "_child")) %>%
-  # Filter for themes that have no child themes
-  filter(is.na(id_child)==TRUE)
+  left_join(themes, by= c("id"= "parent_id"), suffix= c("_parent", "_child")) %>%            # Left join the themes table to its own children
+  filter(is.na(id_child)==TRUE)                                # Filter for themes that have no child themes
+
+
+#===========================================================================================================================
+# Task: Find out the observations in employees that exists in bonuses dataset. Also not exists in bonuses.
+#===========================================================================================================================
+
+semp<- employees %>% 
+  semi_join(bonuses, by= "id")
+
+view(semp)
+
+aemp<- employees %>% 
+  anti_join(bonuses, by= "id")
+
+view(aemp)
+
+
+#===========================================================================================================================
+
+#===========================================================================================================================
+
+
+
+
+
 
 
 
