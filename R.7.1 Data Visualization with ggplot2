@@ -140,6 +140,22 @@ CO2 %>%
   facet_wrap(~ Type)                                    # Converts to several sub graph. 
 
 
+#===============================
+# Visualizing Set Differences: 
+#===============================
+
+#===========================================================================================================================
+# Task: 
+#===========================================================================================================================
+
+color_palette<- setNames(colors_joined$rgb, colors_joined$name) 
+
+colors_joined <- mutate(name= fct_reorder(name, difference)) %>% 
+ggplot(aes(name, difference, fill= name)) + 
+geom_col() + 
+coord_flip()+ 
+scale_fill_manual(values= color_palette, guide= "none")
+
 
 
 
