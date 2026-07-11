@@ -5,6 +5,7 @@
 
 # Filtering joins: Filtering join keep or removes obvervations from the first table. 
 # Does not add new variables. 
+# It is more like subtracting set from another set. 
 # Filtering verbs are: semi_join and anti_join.
     # semi_join and anti_join both provides the column and data from first table that exists (semi) or not exist(anti) in other table. 
 
