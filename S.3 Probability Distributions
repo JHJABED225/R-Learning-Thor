@@ -1,7 +1,13 @@
 
 # Probability Distribution 
     # Probability distribution describes the probability of each possible outcomes in a scenario. 
+    # Expected value = mean of a distribution = sum(each outcome * their probability) 
+    # Probability = Selected area of probability distribution.
+    # Discrete uniform distribution = Each outcome has same probability (?) 
 
+# Law of large number: 
+    # As the sample size increases, the sample mean will approach the expected mean, i.e theoretical mean. 
+    
 
 #===========================================================================================================================
 #
