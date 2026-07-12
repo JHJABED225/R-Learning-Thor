@@ -1,5 +1,13 @@
 
 
+
+# sample from dataset: 
+    # sample_n(number): inside the verb, the number of rows need to be selected are given. 
+    # sample_n(number, replace= TRUE/FALSE): Replace is false by default. 
+    # set.seed(number): to get the same random observations each time under specific seed number. 
+
+
+
 #===========================================================================================================================
 # Task: Find the mean, standard variation and variance of sleep_total from msleep dataset. 
 #===========================================================================================================================
