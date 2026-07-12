@@ -182,3 +182,19 @@ ggplot(colors_joined, aes(x= name,y=difference , fill = name)) +
   scale_fill_manual(values = color_palette, guide = "none") +
   labs(y = "Difference: Batman - Star Wars")
 
+
+#===========================================================================================================================
+# Task: Inside geom_point(), call aes() and map color to clarity, assigning to plt_price_vs_carat_by_clarity.
+# Type the plot's variable name (plt_price_vs_carat_by_clarity) to display it.
+#===========================================================================================================================
+
+plt_price_vs_carat <- ggplot(diamonds, aes(carat, price))
+
+# Assign the updated plot to a new object
+plt_price_vs_carat_by_clarity <- plt_price_vs_carat + geom_point(aes(color = clarity))
+
+# See the plot
+plt_price_vs_carat_by_clarity
+
+
+
