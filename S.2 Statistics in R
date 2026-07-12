@@ -1,0 +1,46 @@
+
+
+#===========================================================================================================================
+# Task: Find the mean, standard variation and variance of sleep_total from msleep dataset. 
+#===========================================================================================================================
+
+mean(msleep$sleep_total)
+sd(msleep$sleep_total) 
+var(msleep$sleep_total)
+
+# Showing along with sleep_total information: 
+
+msleep %>% 
+  select(sleep_total) %>%
+  mutate(avg_sleep = mean(sleep_total, na.rm = TRUE),
+         sd_sleep= sd(sleep_total) ,
+         var_sleep= var(sleep_total, na.rm =  TRUE))
+
+#===========================================================================================================================
+# Task: Calcualte mean absolute deviation of sleep_total from msleep dataset. 
+#===========================================================================================================================
+
+mad_sleep<- mean(abs(msleep$sleep_total- mean(msleep$sleep_total)))
+
+mad_sleep
+
+
+
+#===========================================================================================================================
+# Task: Find the quartile/quantile of sleep total column using several procedure. 
+#===========================================================================================================================
+
+quantile(msleep$sleep_total)                                        # By default, it will split the data to 5 quantiles. 
+
+quantile(msleep$sleep_total, probs = c(0.25, 0.50, 0.75))  
+
+quantile(msleep$sleep_total, probs = seq(from=0, to= 1, by= 0.25))
+
+quantile(msleep$sleep_total, probs = seq(from=0, to= 1, by= 0.20))       # This will show 6 points of datasets. 
+
+
+
+
+#===========================================================================================================================
+# Task: 
+#===========================================================================================================================
