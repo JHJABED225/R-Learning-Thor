@@ -39,8 +39,26 @@ quantile(msleep$sleep_total, probs = seq(from=0, to= 1, by= 0.25))
 quantile(msleep$sleep_total, probs = seq(from=0, to= 1, by= 0.20))       # This will show 6 points of datasets. 
 
 
+#===========================================================================================================================
+# Task: Find out the outliers for bodywt in msleep dataset. 
+#===========================================================================================================================
 
+q1 <- quantile(msleep$bodywt, 0.25)       # 25th percentile of bodywt
+q3 <- quantile(msleep$bodywt, 0.75)       # 75th percentile of bodywt
+
+iqr <- q3 - q1                # IQR of bodywt
+
+lower <- q1 - 1.5 * iqr       # Lower limit of outliers cutoff
+upper <- q3 + 1.5 * iqr       # Upper limit of outliers cutoff
+
+msleep %>%
+  filter(bodywt>upper | bodywt<lower)     # Filter bodywt to find outliers
 
 #===========================================================================================================================
 # Task: 
 #===========================================================================================================================
+
+
+
+
+
