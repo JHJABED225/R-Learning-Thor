@@ -2,6 +2,12 @@
 
 # starts_with works inside select( ) command. You can't use it inside mutate() function. 
 
+# count function does not work inside mutate. It does grouping automatically by the variable provided inside it. 
+    starwars %>% 
+        count(hair_color)      # This will show the count for each hair_color option. 
+
+# 
+
 
 
 #===========================================================================================================================
