@@ -8,6 +8,11 @@
     # Discrete uniform distribution = Each outcome has same probability (?) 
     # Probability = Area under distribution. 
 
+
+# Binomial distribution: 
+    
+    #rbinom(no. of trials, no. of coins, probability of head/success) 
+
 # Uniform Continuous Distribution: 
 
     # P(4<= wait_time <=7) = p(wait_time <=7) - p(wait_time<=4) 
@@ -22,3 +27,6 @@
 #===========================================================================================================================
 #
 #===========================================================================================================================
+
+# Probability of closing > 1 deal out of 3 deals
+1- pbinom(1,3, 0.3, lower.tail= FALSE)
