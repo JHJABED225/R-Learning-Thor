@@ -1,9 +1,19 @@
 
+
+
 # Probability Distribution 
     # Probability distribution describes the probability of each possible outcomes in a scenario. 
     # Expected value = mean of a distribution = sum(each outcome * their probability) 
     # Probability = Selected area of probability distribution.
     # Discrete uniform distribution = Each outcome has same probability (?) 
+    # Probability = Area under distribution. 
+
+# Uniform Continuous Distribution: 
+
+    # P(4<= wait_time <=7) = p(wait_time <=7) - p(wait_time<=4) 
+            = punif(7, min= 0, max= 12) - punif(4, min= 0, max= 12) 
+
+
 
 # Law of large number: 
     # As the sample size increases, the sample mean will approach the expected mean, i.e theoretical mean. 
