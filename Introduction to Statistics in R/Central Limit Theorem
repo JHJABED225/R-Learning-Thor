@@ -1,6 +1,6 @@
 
 
-
+--====================================================================================================--
 --Generating sample--
 
 Function: sample(x, size, replace = FALSE, prob = NULL)
@@ -8,3 +8,23 @@ Here x is the output vector or source data.
 size= non-negative value. It defines how many elements to randomly select. 
 replace = with or without replacement. 
 prob= probability weight. By default it is null. 
+
+
+# ====================================================================================================--
+# Practice: Pick 3 unique colors randomly(without replacement) from color vector.
+# ====================================================================================================--
+
+  colors <- c("Red", "Green", "Blue", "Yellow", "Orange")
+  sample(colors, size = 3)
+
+# Output: [1] "Green" "Yellow" "Red"
+
+# ====================================================================================================--
+# Practice: Take 30 samples of 20 values of num_users, take mean of each sample
+# ====================================================================================================--
+    set.seed(321)                       # Set seed to 321
+
+    sample_means <- replicate(30, sample(all_deals$num_users, 20) %>% mean())
+
+    mean(sample_means)                  # Calculate mean of sample_means
+    mean(amir_deals$num_users)          # Calculate mean of num_users in amir_deals
