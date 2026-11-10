@@ -1,0 +1,10 @@
+
+
+
+--Generating sample--
+
+Function: sample(x, size, replace = FALSE, prob = NULL)
+Here x is the output vector or source data. 
+size= non-negative value. It defines how many elements to randomly select. 
+replace = with or without replacement. 
+prob= probability weight. By default it is null. 
