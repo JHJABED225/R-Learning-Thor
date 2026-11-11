@@ -1,0 +1,41 @@
+
+
+--====================================================================================================
+# Question: The sales dataset contains information about daily store purchases. 
+What is the correct way to calculate the total_quantityfor each product_lineand product? 
+
+Solution: 
+  sales %>%
+  group_by(product_line, product) %>%
+  summarize(total_quantity = sum(quantity))
+
+--====================================================================================================
+
+
+--====================================================================================================
+# Question: The sales dataset contains the information about daily store purchase. 
+What is the correct way of selecting dat, starting with "product" and "unit_price" ? 
+
+Solution: 
+  sales %>% 
+    select(date, starts_with("product"), unit_price)
+
+--====================================================================================================
+
+
+--====================================================================================================
+# Question: The sales dataset contains the information about daily store purchase. 
+What is the correct way of counting the quantity sold on each date and sorting the result? 
+
+Solution: 
+    sales %>%
+      count(date, wt= quantity,sort = TRUE) 
+
+
+--====================================================================================================
+
+
+
+
+
+
